@@ -25,15 +25,12 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      loader: 'babel',
+      loader: 'babel-loader',
       include: src
     }]
   },
   resolve: {
-    root: src,
-    extensions: ['', '.js', '.jsx']
+    modules: [src, '../'],
+    extensions: ['.js', '.jsx']
   },
-  eslint: {
-    configFile: '.eslintrc'
-  }
 };
